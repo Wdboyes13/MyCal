@@ -1,6 +1,6 @@
 # A Planner & Calendar app  
 __I'm doing this for a school project__
-
+__You can contact me at [willdev2025@outlook.com](mailto:willdev2025@outlook.com)__
 ## Dependencies
 Raylib  
 LibXML2  
