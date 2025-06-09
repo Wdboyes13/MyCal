@@ -1,0 +1,6 @@
+Planner/calendar app
+
+CalDAV Integration
+UI with raylib
+Daily planner
+School Schedules (do first)

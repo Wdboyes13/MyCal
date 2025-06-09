@@ -1,0 +1,14 @@
+<schedule>
+    <day num="1">
+        <block num="1">PBL</block>
+        <block num="2">Math</block>
+        <block num="3">ADST</block>
+        <block num="4">Band</block>
+    </day>
+    <day num="2">
+        <block num="1">PBL</block>
+        <block num="2">Literacy</block>
+        <block num="3">PHE</block>
+        <block num="4">Entrepreneurship</block>
+    </day>
+</schedule>
