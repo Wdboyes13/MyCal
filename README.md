@@ -11,3 +11,8 @@ Currently only planner is mostly done
 Schedules are in XML  
 
 The files ending in ~ are emacs saves  
+
+## Notice  
+The 'Roboto' Font is licensed under the SIL Open Font License Version 1.1  
+More details about this font are available at https://fonts.google.com/specimen/Roboto  
+The full license text is available at [OFL.txt](OFL.txt)
