@@ -1,0 +1,4 @@
+# ninja log v6
+0	38	1749510010087264938	CMakeFiles/app.dir/src/main.c.o	819bd754bb843f0b
+1	109	1749510010087662647	CMakeFiles/app.dir/src/planner.c.o	3a9e26e6530982
+111	334	1749510010197437520	app	f1023e46bbfa360f

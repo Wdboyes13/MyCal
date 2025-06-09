@@ -1,0 +1,3 @@
+/Users/william/coding/deepdive/build/CMakeFiles/app.dir
+/Users/william/coding/deepdive/build/CMakeFiles/edit_cache.dir
+/Users/william/coding/deepdive/build/CMakeFiles/rebuild_cache.dir

@@ -59,12 +59,23 @@ void sched() {
 	for (xmlNodePtr cnode = node->children; cnode != NULL; cnode = cnode->next){
 	  if (cnode->type == XML_ELEMENT_NODE){
 	    xmlChar* cattr = xmlGetProp(cnode, (const xmlChar*)"num");
+	    xmlChar* bcont = xmlNodeGetContent(cnode);
 	    if (cattr != NULL){
-	      xmlChar* bcont = xmlNodeGetContent(cnode);
 	      char bbuf[256];
 	      snprintf(bbuf, sizeof(bbuf), "\t Block %s : %s", cattr, bcont);
 	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
 	      y += bloH;
+	      xmlFree(bcont);
+	      xmlFree(cattr);
+	    } else if (strcmp((const char*)bcont, "Break") == 0 || strcmp((const char*)bcont, "Lunch") == 0){
+	      char bbuf[256];
+	      snprintf(bbuf, sizeof(bbuf), "\t%s", bcont);
+	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
+	      y += bloH;
+	      xmlFree(bcont);
+	      xmlFree(cattr);
+	    }
+	    else {
 	      xmlFree(bcont);
 	      xmlFree(cattr);
 	    }
