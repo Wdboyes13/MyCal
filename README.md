@@ -11,6 +11,8 @@ Currently only planner is mostly done
 Schedules are in XML  
 
 The files ending in ~ are emacs saves  
+  
+The Makefile is just a wrapper around CMake and others to make my life easier  
 
 ## Notice  
 The 'Roboto' Font is licensed under the SIL Open Font License Version 1.1  
