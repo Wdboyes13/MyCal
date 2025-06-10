@@ -24,9 +24,8 @@ This project is released under The GNU General Public License version 3.0
 You can view the full License text at [LICENSE](LICENSE)  
 As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlob.txt)
 
-## Compatability  
-|---------|-------|-------|  
+## Compatability    
+
 | Windows | macOS | Linux |  
 |---------|-------|-------|  
 | NO      | YES   | YES   |  
-|---------|-------|-------|  
