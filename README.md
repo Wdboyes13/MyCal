@@ -28,4 +28,4 @@ As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlo
 
 | Windows | macOS | Linux |  
 |---------|-------|-------|  
-| ✖️      | ✔️     | ✔️    |  
+| NO      | YES   | YES   |  
