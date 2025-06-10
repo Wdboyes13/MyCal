@@ -1,0 +1,9 @@
+Some project info is embedded in the binary
+It can be viewed with these Commands
+
+```sh
+strings ./app | grep License # License Name
+strings ./app | grep GitHub # GitHub Username
+strings ./app | grep Website # Website
+strings ./app | grep Email # Email address
+```

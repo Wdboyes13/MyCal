@@ -1,8 +1,13 @@
-.section __TEXT,__cust_info
+.section __TEXT,__my_info
 .align 2
-.global _my_info
-_my_info:
-    .asciz "GNU General Public License v3"
-    .asciz "willdev2025@icloud.com"
-    .asciz "https://github.com/Wdboyes13/MyCal"
-    .asciz "Wdboyes13"
+
+.global _my_email
+_my_email:
+    .asciz "Email: willdev2025@icloud.com"
+.global _proj_site
+_proj_site:
+    .asciz "Website: https://github.com/Wdboyes13/MyCal"
+.global _my_uname
+    .asciz "GitHub Username: Wdboyes13"
+.global _license
+    .asciz "License: GNU General Public License v3"
