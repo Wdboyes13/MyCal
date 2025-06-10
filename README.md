@@ -28,4 +28,7 @@ As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlo
 
 | Windows | macOS | Linux |  
 |---------|-------|-------|  
-| NO      | YES   | YES   |  
+| NO      | YES   | YES   |    
+
+- Windows is incompatible due to unistd.h & strings.h being needed
+- App icon will not load on macOS due to reasons
