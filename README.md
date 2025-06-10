@@ -10,7 +10,7 @@ idea.txt is the idea
 Currently only planner is mostly done    
 Schedules are in XML  
 
-The files ending in ~ are emacs saves  
+The files ending in ~ are emacs saves (I clean these regularly)  
   
 The Makefile is just a wrapper around CMake and others to make my life easier  
 
