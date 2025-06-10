@@ -69,7 +69,7 @@ void sched() {
 	      xmlFree(cattr);
 	    } else if (strcmp((const char*)bcont, "Break") == 0 || strcmp((const char*)bcont, "Lunch") == 0){
 	      char bbuf[256];
-	      snprintf(bbuf, sizeof(bbuf), "\t%s", bcont);
+	      snprintf(bbuf, sizeof(bbuf), "\t %s", bcont);
 	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
 	      y += bloH;
 	      xmlFree(bcont);

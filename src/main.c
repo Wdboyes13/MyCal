@@ -16,6 +16,32 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.                                                                                                                            
   */
 #include "stuff.h"
+#include <raylib.h>
 int main() {
-  sched();
+  InitWindow(800, 600, "MyCal");
+  SetTargetFPS(60);
+  Rectangle scbutton = {350, 280, 100, 50};
+  Color scbuttoncol = BLACK;
+  Font roboto = LoadFontEx("Roboto.ttf", 40, 0, 0);
+  while (!WindowShouldClose()){
+    BeginDrawing();
+    ClearBackground(WHITE);
+
+    if (CheckCollisionPointRec(GetMousePosition(), scbutton)){
+      scbuttoncol = DARKGRAY;
+      if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
+	sched();
+      }
+    } else {
+      scbuttoncol = BLACK;
+    }
+
+    DrawRectangleRec(scbutton, scbuttoncol);
+    DrawTextEx(roboto, "Schedule", (Vector2){scbutton.x + 12, scbutton.y + 15}, 20, 1, WHITE);
+
+    EndDrawing();
+  }
+  UnloadFont(roboto);
+  CloseWindow();
+  return 0;
 }
