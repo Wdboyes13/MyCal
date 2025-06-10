@@ -13,6 +13,6 @@ set(PROJECT_SITE "https://github.com/Wdboyes13/MyCal")
 set(raylib_DIR "/opt/will/lib/cmake/raylib")
 find_package(raylib REQUIRED)
 find_package(LibXml2 REQUIRED)
-add_executable(app src/main.c src/planner.c)
+add_executable(app src/main.c src/planner.c src/asplanner.c)
 
 target_link_libraries(app PRIVATE raylib LibXml2::LibXml2)

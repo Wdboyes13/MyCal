@@ -20,4 +20,6 @@
 #ifndef STUFF_H
 #define STUFF_H
 void sched();
+int rlmain();
+void assched();
 #endif
