@@ -16,3 +16,5 @@ find_package(LibXml2 REQUIRED)
 add_executable(app src/main.c src/planner.c src/asplanner.c)
 
 target_link_libraries(app PRIVATE raylib LibXml2::LibXml2)
+
+add_executable(rsr src/rsr/main.c)

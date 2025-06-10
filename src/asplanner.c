@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-#include <_strings.h>
+
 #include <raylib.h>
 #include <string.h>
 #include <libxml2/libxml/parser.h>
@@ -24,11 +24,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "stuff.h"
 #include <strings.h>
 #include <stdbool.h>
+#include <unistd.h>
+
 void assched() {
   InitWindow(800, 600, "After School Planner");
   bool wino = true;
   Font roboto = LoadFontEx("Roboto.ttf", 35, 0, 0);
   bool robo = true;
+  Image img = LoadImage("icon.png");
+  bool imo = true;
   xmlInitParser();
   xmlDocPtr doc = xmlReadFile("asc.xml", NULL, 0);
   if (doc == NULL){
@@ -40,6 +44,9 @@ void assched() {
   int dayC = 5;
   
   xmlNodePtr root = xmlDocGetRootElement(doc);
+
+  SetWindowIcon(img);
+  
   while(!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
@@ -80,9 +87,17 @@ void assched() {
       }
     }
     EndDrawing();
+    if (IsKeyPressed(KEY_ESCAPE)){
+      if (robo == true) {UnloadFont(roboto); robo = false;}
+      if (wino == true) {CloseWindow(); wino = false;}
+      if (imo == true) {UnloadImage(img); imo = false;}
+        char *argv[] = {"./rsr", NULL};
+	      execve("./rsr", argv, NULL);
+    }
   }
   xmlFreeDoc(doc);
   xmlCleanupParser();
+  if (imo == true) {UnloadImage(img); imo = false;}
   if (robo == true) {UnloadFont(roboto); robo = false;}
   if (wino == true) {CloseWindow(); wino = false;}
 }

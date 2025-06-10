@@ -27,8 +27,12 @@ int rlmain() {
   Font roboto = LoadFontEx("Roboto.ttf", 40, 0, 0);
   bool rbl = true;
   bool wino = true;
+  Image img = LoadImage("icon.png");
+  bool imo = true;
   Rectangle ascbutton = {343, 345, 120, 50};
   Color ascbuttoncol = BLACK;
+  
+  SetWindowIcon(img);
   
   while (!WindowShouldClose()){
     BeginDrawing();
@@ -37,17 +41,11 @@ int rlmain() {
     if (CheckCollisionPointRec(GetMousePosition(), scbutton)){
       scbuttoncol = DARKGRAY;
       if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
-	
-	if (rbl == true){
-	  UnloadFont(roboto);
-	  rbl = false;
-	}
-	if (wino == true){
-	  CloseWindow();
-	  wino = false;
-	}
-	sched();
-	break;
+	      if (rbl == true){UnloadFont(roboto); rbl = false;}
+	      if (wino == true){CloseWindow(); wino = false;}
+        if (imo == true) {UnloadImage(img); imo = false;}
+	      sched();
+	      break;
       }
     } else {
       scbuttoncol = BLACK;
@@ -56,16 +54,11 @@ int rlmain() {
     if (CheckCollisionPointRec(GetMousePosition(), ascbutton)){
       ascbuttoncol = DARKGRAY;
       if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-	if (rbl == true){
-	  UnloadFont(roboto);
-	  rbl = false;
-	}
-	if (wino == true){
-          CloseWindow();
-	  wino = false;
-	}
-	assched();
-	break;
+	      if (rbl == true){UnloadFont(roboto); rbl = false;}
+	      if (wino == true){CloseWindow(); wino = false;}
+        if (imo == true) {UnloadImage(img); imo = false;}
+	      assched();
+	      break;
       }
     } else {
       ascbuttoncol = BLACK;
@@ -80,12 +73,9 @@ int rlmain() {
     
     EndDrawing();
   }
-  if (rbl == true){
-    UnloadFont(roboto);
-  }
-  if (wino == true){
-    CloseWindow();
-  }
+  if (rbl == true){UnloadFont(roboto);}
+  if (wino == true){CloseWindow();}
+  if (imo == true) {UnloadImage(img); imo = false;}
   return 0;
 }
 int main() {

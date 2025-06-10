@@ -90,6 +90,41 @@ build app: C_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/src/main.c.o CMakeFiles/
   TARGET_FILE = app
   TARGET_PDB = app.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target rsr
+
+
+#############################################
+# Order-only phony target for rsr
+
+build cmake_object_order_depends_target_rsr: phony || .
+
+build CMakeFiles/rsr.dir/src/rsr/main.c.o: C_COMPILER__rsr_unscanned_ /Users/william/coding/deepdive/src/rsr/main.c || cmake_object_order_depends_target_rsr
+  DEP_FILE = CMakeFiles/rsr.dir/src/rsr/main.c.o.d
+  FLAGS = -I/opt/homebrew/include -I/opt/will/include -std=gnu17 -arch arm64
+  OBJECT_DIR = CMakeFiles/rsr.dir
+  OBJECT_FILE_DIR = CMakeFiles/rsr.dir/src/rsr
+  TARGET_COMPILE_PDB = CMakeFiles/rsr.dir/
+  TARGET_PDB = rsr.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target rsr
+
+
+#############################################
+# Link the executable rsr
+
+build rsr: C_EXECUTABLE_LINKER__rsr_ CMakeFiles/rsr.dir/src/rsr/main.c.o
+  FLAGS = -I/opt/homebrew/include -I/opt/will/include -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/flex/lib -L/opt/homebrew/opt/bison/lib -L/opt/homebrew/opt/openssl/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libiconv/lib -L/opt/homebrew/lib -L/opt/homebrew/opt/libxslt/lib -L/opt/will/lib
+  OBJECT_DIR = CMakeFiles/rsr.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/rsr.dir/
+  TARGET_FILE = rsr
+  TARGET_PDB = rsr.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -132,7 +167,7 @@ build codegen: phony
 #############################################
 # Folder: /Users/william/coding/deepdive/build
 
-build all: phony app
+build all: phony app rsr
 
 # =============================================================================
 # Built-in targets

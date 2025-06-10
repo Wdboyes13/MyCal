@@ -1,4 +1,4 @@
-FLS := $(wildcard src/*) testing/asc.xml testing/dsc.xml other/idea.txt README.md CMakeLists.txt
+FLS := $(wildcard src/*.c) $(wildcard src/*.h) $(wildcard src/rsr/*.c) testing/asc.xml testing/dsc.xml other/idea.txt README.md CMakeLists.txt
 
 all: build tinstall lnc
 
@@ -15,7 +15,7 @@ build:
 
 	cd build && ninja && cd ..
 tinstall:
-	cp build/app testing/
+	cp build/app build/rsr testing/
 
 git:
 	git add .

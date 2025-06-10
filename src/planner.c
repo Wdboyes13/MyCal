@@ -23,9 +23,19 @@
 #include <stdlib.h>
 #include "stuff.h"
 #include <string.h>
+#include <unistd.h>
+#include <stdbool.h>
+  
 void sched() {
   InitWindow(800, 600, "Planner");
+  bool wino = true;
   Font roboto = LoadFontEx("Roboto.ttf", 40, 0, 0);
+  bool robo = true;
+  Image img = LoadImage("icon.png");
+  bool imo = true;
+
+  SetWindowIcon(img);
+
   while (!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
@@ -85,11 +95,19 @@ void sched() {
 	dayDex++;
       }
     }
+    if (IsKeyPressed(KEY_ESCAPE)){
+      if (imo == true) {UnloadImage(img); imo = false;}
+      if (robo == true) {UnloadFont(roboto); robo = false;}
+      if (wino == true) {CloseWindow(); wino = false;}
+      char *argv[] = {"./rsr", NULL};
+      execve("./rsr", argv, NULL);
+    }
     EndDrawing();
     xmlCleanupParser();
     xmlFreeDoc(doc);
   }
-  CloseWindow();
-  UnloadFont(roboto);
+  if (imo == true) {UnloadImage(img); imo = false;}
+  if (robo == true) {UnloadFont(roboto); robo = false;}
+  if (wino == true) {CloseWindow(); wino = false;}
   exit(0);
 }

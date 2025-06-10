@@ -1,4 +1,5 @@
-# A Planner & Calendar app  
+# MyCal
+__A Planner & Calendar app__
 __I'm doing this for a school project__
 __You can contact me at [willdev2025@outlook.com](mailto:willdev2025@outlook.com)__
 ## Dependencies
@@ -23,3 +24,9 @@ This project is released under The GNU General Public License version 3.0
 You can view the full License text at [LICENSE](LICENSE)  
 As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlob.txt)
 
+## Compatability  
+|---------|-------|-------|  
+| Windows | macOS | Linux |  
+|---------|-------|-------|  
+| NO      | YES   | YES   |  
+|---------|-------|-------|  
