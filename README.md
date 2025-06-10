@@ -26,9 +26,11 @@ As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlo
 
 ## Compatability    
 
-| Windows | macOS | Linux |  
-|---------|-------|-------|  
-| NO      | YES   | YES   |    
+| Windows | macOS | Linux | AArch64 | x86_64 |
+|---------|-------|-------|---------|--------|
+| NO      | YES   | YES   | YES     | NO     |
 
 - Windows is incompatible due to unistd.h & strings.h being needed
-- App icon will not load on macOS due to reasons
+- App icon will not load on macOS due to reasons  
+- AArch64 only is supported due to x86_64 Assembly & AArch64 Assembly being very different
+- x86_64 MAY be supported later but will require a special CMakeLists.txt

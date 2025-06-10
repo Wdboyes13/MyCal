@@ -26,5 +26,12 @@ lnc:
 	wc -l $(FLS)
 clean:
 	cd other && ./clean.sh
-
-.PHONY: all regen reconf build install git lnc clean
+pkg:
+	cp build/app build/rsr pkg/
+	codesign --sign "Apple Development: wdboyes@icloud.com (5SFDQ6365C)" --force pkg/rsr
+	codesign --sign "Apple Development: wdboyes@icloud.com (5SFDQ6365C)" --force pkg/app
+	@echo "\n"
+	codesign -dvv pkg/app
+	@echo "\n"
+	zip -r mycal.zip pkg/
+.PHONY: all regen reconf build install git lnc clean pkg
