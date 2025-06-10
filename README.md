@@ -30,7 +30,7 @@ As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlo
 |---------|-------|-------|---------|--------|
 | NO      | YES   | YES   | YES     | NO     |
 
-- Windows is incompatible due to unistd.h & strings.h being needed
+- __Windows__ is incompatible due to `unistd.h` & `strings.h` being needed
 - App icon will not load on macOS due to reasons  
-- AArch64 only is supported due to x86_64 Assembly & AArch64 Assembly being very different
-- x86_64 MAY be supported later but will require a special CMakeLists.txt
+- __Only AArch64__ supported due to x86_64 Assembly & AArch64 Assembly being very different
+- x86_64 MAY be supported later but will require a special `CMakeLists.txt`
