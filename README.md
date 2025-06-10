@@ -1,7 +1,8 @@
 # MyCal
 __A Planner & Calendar app__
 __I'm doing this for a school project__
-__You can contact me at [willdev2025@outlook.com](mailto:willdev2025@outlook.com)__
+__You can contact me at [willdev2025@outlook.com](mailto:willdev2025@outlook.com)__   
+__Info about info can be found at [other/info.txt](other/info.txt)__  
 ## Dependencies
 Raylib  
 LibXML2  
