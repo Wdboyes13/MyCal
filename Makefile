@@ -1,10 +1,10 @@
-FLS := $(wildcard src/*) asc.xml dsc.xml idea.txt README.md CMakeLists.txt
+FLS := $(wildcard src/*) testing/asc.xml testing/dsc.xml other/idea.txt README.md CMakeLists.txt
 
-all: build install lnc
+all: build tinstall lnc
 
 regen:
 	mkdir build
-	cd build && cmake -G Ninja ..
+	cd build && cmake -G Ninja .. && cd ..
 reconf:
 	rm -rf build
 	$(MAKE) regen
@@ -13,9 +13,9 @@ build:
 	  $(MAKE) regen; \
 	fi
 
-	cd build && ninja
-install:
-	cd build && cp app ..
+	cd build && ninja && cd ..
+tinstall:
+	cp build/app testing/
 
 git:
 	git add .
@@ -24,5 +24,7 @@ git:
 
 lnc:
 	wc -l $(FLS)
+clean:
+	cd other && ./clean.sh
 
-.PHONY: all regen reconf build install git lnc
+.PHONY: all regen reconf build install git lnc clean
