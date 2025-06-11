@@ -36,9 +36,7 @@ As well as the License's File Header at [other/LicenseBlob.txt](other/LicenseBlo
 
 | Windows | macOS | Linux | AArch64 | x86_64 |
 |---------|-------|-------|---------|--------|
-| NO      | YES   | YES   | YES     | NO     |
+| NO      | YES   | YES   | YES     | YES    |
 
-- __Windows__ is incompatible due to `unistd.h` & `strings.h` being needed
-- App icon will not load on macOS due to reasons  
-- __Only AArch64__ supported due to x86_64 Assembly & AArch64 Assembly being very different
-- x86_64 MAY be supported later but will require a special `CMakeLists.txt`
+- __Windows__ is incompatible due to `unistd.h` & `strings.h` being needed as well as MSVC being wierd with .S files
+- App icon will not load on macOS due to reasons (Unless someone wants to deal with .app bundles)
