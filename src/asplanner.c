@@ -29,6 +29,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 void assched() {
   InitWindow(800, 600, "After School Planner");
   bool wino = true;
+  Music music = LoadMusicStream("PixelPeekerPolka-faster.mp3");
+  bool mlo = true;
+  PlayMusicStream(music);
   Font roboto = LoadFontEx("Roboto.ttf", 35, 0, 0);
   bool robo = true;
   Image img = LoadImage("icon.png");
@@ -50,6 +53,10 @@ void assched() {
   while(!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
+    UpdateMusicStream(music);
+    if (!IsMusicStreamPlaying(music)){
+      PlayMusicStream(music);
+    }
     for (int i = 0; i < dayC; i++){
       DrawTextEx(roboto, days[i], (Vector2){dayX[i], 10}, 25, 1, BLACK);
     } 
@@ -91,12 +98,14 @@ void assched() {
       if (robo == true) {UnloadFont(roboto); robo = false;}
       if (wino == true) {CloseWindow(); wino = false;}
       if (imo == true) {UnloadImage(img); imo = false;}
-        char *argv[] = {"./rsr", NULL};
+      if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
+      char *argv[] = {"./rsr", NULL};
 	      execve("./rsr", argv, NULL);
     }
   }
   xmlFreeDoc(doc);
   xmlCleanupParser();
+  if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
   if (imo == true) {UnloadImage(img); imo = false;}
   if (robo == true) {UnloadFont(roboto); robo = false;}
   if (wino == true) {CloseWindow(); wino = false;}

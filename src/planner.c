@@ -16,6 +16,7 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.                                                                                                                            
   */
 
+#include <_strings.h>
 #include <stdio.h>
 #include <raylib.h>
 #include <libxml2/libxml/parser.h>
@@ -29,6 +30,11 @@
 void sched() {
   InitWindow(800, 600, "Planner");
   bool wino = true;
+  InitAudioDevice();
+  Music music = LoadMusicStream("PixelPeekerPolka-faster.mp3");
+  bool mlo = true;
+  PlayMusicStream(music);
+  
   Font roboto = LoadFontEx("Roboto.ttf", 40, 0, 0);
   bool robo = true;
   Image img = LoadImage("icon.png");
@@ -38,6 +44,10 @@ void sched() {
   xmlInitParser();
   xmlDocPtr doc = xmlReadFile("dsc.xml", NULL, 0);
   while (!WindowShouldClose()){
+    UpdateMusicStream(music);
+    if (!IsMusicStreamPlaying(music)){
+      PlayMusicStream(music);
+    }
     BeginDrawing();
     ClearBackground(WHITE);
     if (doc == NULL){
@@ -76,7 +86,7 @@ void sched() {
 	      y += bloH;
 	      xmlFree(bcont);
 	      xmlFree(cattr);
-	    } else if (strcmp((const char*)bcont, "Break") == 0 || strcmp((const char*)bcont, "Lunch") == 0){
+	    } else if (strcasecmp((const char*)bcont, "Break") == 0 || strcasecmp((const char*)bcont, "Lunch") == 0){
 	      char bbuf[256];
 	      snprintf(bbuf, sizeof(bbuf), "\t %s", bcont);
 	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
@@ -94,21 +104,18 @@ void sched() {
 	dayDex++;
       }
     }
-    if (IsKeyPressed(KEY_ESCAPE)){
-      if (imo == true) {UnloadImage(img); imo = false;}
-      if (robo == true) {UnloadFont(roboto); robo = false;}
-      if (wino == true) {CloseWindow(); wino = false;}
-      if (access("./rsr", X_OK) != 0){
-        perror("Executable not found");
-        exit(1);
-      }
-      char *envp[] = {NULL};
-      char *argv[] = {"./rsr", NULL};
-      execve("./rsr", argv, envp);
-      
-    }
     EndDrawing();
+    if (IsKeyPressed(KEY_ESCAPE)){
+        if (robo == true) {UnloadFont(roboto); robo = false;}
+        if (wino == true) {CloseWindow(); wino = false;}
+        if (imo == true) {UnloadImage(img); imo = false;}
+        if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
+        char *argv[] = {"./rsr", NULL};
+                execve("./rsr", argv, NULL);
+    }
+
   }
+  if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
   if (imo == true) {UnloadImage(img); imo = false;}
   if (robo == true) {UnloadFont(roboto); robo = false;}
   if (wino == true) {CloseWindow(); wino = false;}

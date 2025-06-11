@@ -1,7 +1,7 @@
 /*                                                                                                                                                                                                
   MyCal - A Planner & Calendar app with a UI                                                                                                                                                      
                                                                                                                                                                                                     
-  Copyright (C) 2025  Wdboyes13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  Copyright (C) 2025  Wdboyes13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   This program is free software: you can redistribute it and/or modify                                                                                                                                                                                                                                                                                                                                
   it under the terms of the GNU General Public License as published by                                                                                                                                                                                                                                                                                                                              
   the Free Software Foundation, either version 3 of the License, or                                                                                                                                                                                                                                                                                                                                 
@@ -21,6 +21,10 @@
   
 int rlmain() {
   InitWindow(800, 600, "MyCal");
+  InitAudioDevice();
+  Music music = LoadMusicStream("PixelPeekerPolka-faster.mp3");
+  bool mlo = true;
+  PlayMusicStream(music);
   SetTargetFPS(60);
   Rectangle glbutton = {343, 220, 120, 50};
   Rectangle scbutton = {350, 280, 100, 50};
@@ -39,12 +43,18 @@ int rlmain() {
   while (!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
+    UpdateMusicStream(music);
+    if (!IsMusicStreamPlaying(music)){
+      PlayMusicStream(music);
+    }
+    
     if (CheckCollisionPointRec(GetMousePosition(), glbutton)){
       glbuttoncol = DARKGRAY;
       if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
 	  if (rbl == true){UnloadFont(roboto); rbl = false;}
           if (wino == true){CloseWindow(); wino = false;}
           if (imo == true) {UnloadImage(img); imo = false;}
+	  if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
 	  launcher(0);
           break;
       }
@@ -58,6 +68,7 @@ int rlmain() {
 	      if (rbl == true){UnloadFont(roboto); rbl = false;}
 	      if (wino == true){CloseWindow(); wino = false;}
         if (imo == true) {UnloadImage(img); imo = false;}
+	if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
 	      sched();
 	      break;
       }
@@ -71,6 +82,7 @@ int rlmain() {
 	      if (rbl == true){UnloadFont(roboto); rbl = false;}
 	      if (wino == true){CloseWindow(); wino = false;}
         if (imo == true) {UnloadImage(img); imo = false;}
+	if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
 	      assched();
 	      break;
       }
@@ -93,6 +105,7 @@ int rlmain() {
   if (rbl == true){UnloadFont(roboto);}
   if (wino == true){CloseWindow();}
   if (imo == true) {UnloadImage(img); imo = false;}
+  if (mlo == true) {StopMusicStream(music); UnloadMusicStream(music); CloseAudioDevice(); mlo = false;}
   return 0;
 }
 int main() {
