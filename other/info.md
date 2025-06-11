@@ -1,4 +1,4 @@
-## Some project info is embedded in the binary
+## Some project info is embedded in the executable  
 ## It can be viewed with these Commands
 
 ```sh
