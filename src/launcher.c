@@ -66,7 +66,7 @@ void launcher(int cl) {
     snprintf(fp, sizeof(fp), "%s/.mycal/tetris/usr/local/bin", HOME);
     if (stat(fp, &st) == 0 && S_ISDIR(st.st_mode)){
       system("wget https://github.com/Wdboyes13/MyCal/raw/refs/heads/main/other/rnt.sh");
-      system("chmod +X rnt.sh");
+      system("chmod +x rnt.sh");
       system("./rnt.sh");
       if (unlink("rnt.sh") == 0){
 	printf("Runner Removed\n");
@@ -83,6 +83,7 @@ void launcher(int cl) {
       } else {
 	printf("Installer cleanup failed\n");
       }
+      launcher(0);
     }
   }
   } else {
