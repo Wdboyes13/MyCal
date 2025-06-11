@@ -35,12 +35,11 @@ void sched() {
   bool imo = true;
 
   SetWindowIcon(img);
-
+  xmlInitParser();
+  xmlDocPtr doc = xmlReadFile("dsc.xml", NULL, 0);
   while (!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
-    xmlInitParser();
-    xmlDocPtr doc = xmlReadFile("dsc.xml", NULL, 0);
     if (doc == NULL){
       fprintf(stderr, "Failed to parse XML\n");
       exit(1);
@@ -99,15 +98,21 @@ void sched() {
       if (imo == true) {UnloadImage(img); imo = false;}
       if (robo == true) {UnloadFont(roboto); robo = false;}
       if (wino == true) {CloseWindow(); wino = false;}
+      if (access("./rsr", X_OK) != 0){
+        perror("Executable not found");
+        exit(1);
+      }
+      char *envp[] = {NULL};
       char *argv[] = {"./rsr", NULL};
-      execve("./rsr", argv, NULL);
+      execve("./rsr", argv, envp);
+      
     }
     EndDrawing();
-    xmlCleanupParser();
-    xmlFreeDoc(doc);
   }
   if (imo == true) {UnloadImage(img); imo = false;}
   if (robo == true) {UnloadFont(roboto); robo = false;}
   if (wino == true) {CloseWindow(); wino = false;}
+  xmlFreeDoc(doc);
+  xmlCleanupParser();
   exit(0);
 }

@@ -1,0 +1,6 @@
+#include <raylib.h>
+#include <stdlib.h>
+void launcher() {
+  system("");
+  system("");
+}
