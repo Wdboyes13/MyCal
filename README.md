@@ -1,12 +1,9 @@
-# MyCal
+;9u# MyCal
 __A Planner & Calendar app__  
 __I'm doing this for a school project__  
 __You can contact me at [willdev2025@outlook.com](mailto:willdev2025@outlook.com)__   
 __Info about info can be found at [other/info.md](other/info.md)__  
-## Dependencies
-Raylib  
-LibXML2  
-
+  
 ## Notes  
 idea.txt is the idea  
 Currently only planner is mostly done    
@@ -17,15 +14,11 @@ The <sub>Launcher password is 2398</sub> files ending in ~ are emacs saves (I cl
 The Makefile is just a wrapper around CMake and others to make my life easier  
 
 ## Notice  
--- Font --  
-The 'Roboto' Font is licensed under the SIL Open Font License Version 1.1  
-More details about this font are available at https://fonts.google.com/specimen/Roboto  
-The full license text is available at [other/OFL.txt](other/OFL.txt)  
-  
--- Background Music --  
-Pixel Peeker Polka - faster Kevin MacLeod (incompetech.com)  
-Licensed under Creative Commons: By Attribution 3.0 License  
-http://creativecommons.org/licenses/by/3.0/  
+-- Dependencies --  
+[libxml2](https://github.com/GNOME/libxml2) - License info at [Licenses/libxml.txt](Licenses/libxml.txt)  
+[Raylib](https://github.com/raysan5/raylib) - License info at [Licenses/Raylib.txt](Licenses/Raylib.txt)  
+[Roboto Font](https://fonts.google.com/specimen/Roboto) - License info at [Licenses/Font.txt](Licenses/Font.txt)  
+[Pixel Peeker Polka - Faster](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100833) - License info at [Licenses/BGM.txt](Licenses/BGM.txt)  
   
 -- Project --  
 This project is released under The GNU General Public License version 3.0  

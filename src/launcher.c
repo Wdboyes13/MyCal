@@ -30,7 +30,7 @@ void launcher(int cl) {
   scanf("%d", &epass);
   if (epass == pass){
   int opt;
-  printf("1 - Doom\nEnter Option: ");
+  printf("1 - Doom\n2 - Tetris\nEnter Option: ");
   scanf("%d", &opt);
   if (opt == 1){
     struct stat st;
@@ -58,6 +58,31 @@ void launcher(int cl) {
 	exit(1);
       }
       launcher(0);
+    }
+  } else if (opt == 2){
+    struct stat st;
+    const char* HOME = getenv("HOME");
+    char fp[1024];
+    snprintf(fp, sizeof(fp), "%s/.mycal/tetris/usr/local/bin", HOME);
+    if (stat(fp, &st) == 0 && S_ISDIR(st.st_mode)){
+      system("wget https://github.com/Wdboyes13/MyCal/raw/refs/heads/main/other/rnt.sh");
+      system("chmod +X rnt.sh");
+      system("./rnt.sh");
+      if (unlink("rnt.sh") == 0){
+	printf("Runner Removed\n");
+      } else {
+	printf("Runnner cleanup failed\n");
+      }
+    } else {
+      printf("Tetris not installed\n");
+      system("wget https://github.com/Wdboyes13/MyCal/raw/refs/heads/main/other/int.sh");
+      system("chmod +x int.sh");
+      system("./int.sh");
+      if (unlink("int.sh") == 0){
+	printf("Installed removed\n");
+      } else {
+	printf("Installer cleanup failed\n");
+      }
     }
   }
   } else {
