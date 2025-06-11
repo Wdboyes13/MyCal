@@ -16,7 +16,7 @@ find_package(LibXml2 REQUIRED)
 
 set_source_files_properties(src/license.S PROPERTIES LANGUAGE ASM)
 
-add_executable(app src/license.S src/main.c src/planner.c src/asplanner.c)
+add_executable(app src/license.S src/main.c src/planner.c src/asplanner.c src/launcher.c)
 target_link_libraries(app PRIVATE raylib LibXml2::LibXml2)
 
 add_executable(rsr src/license.S src/rsr/main.c)

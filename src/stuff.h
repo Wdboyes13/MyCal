@@ -22,4 +22,5 @@
 void sched();
 int rlmain();
 void assched();
+void launcher(int cl);
 #endif

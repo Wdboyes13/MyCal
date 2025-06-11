@@ -80,6 +80,15 @@ build CMakeFiles/app.dir/src/asplanner.c.o: C_COMPILER__app_unscanned_ /Users/wi
   TARGET_COMPILE_PDB = CMakeFiles/app.dir/
   TARGET_PDB = app.pdb
 
+build CMakeFiles/app.dir/src/launcher.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/launcher.c || cmake_object_order_depends_target_app
+  DEP_FILE = CMakeFiles/app.dir/src/launcher.c.o.d
+  FLAGS = -I/opt/homebrew/include -I/opt/will/include -std=gnu17 -arch arm64 -I/opt/will/include
+  INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
+  OBJECT_DIR = CMakeFiles/app.dir
+  OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target app
@@ -88,7 +97,7 @@ build CMakeFiles/app.dir/src/asplanner.c.o: C_COMPILER__app_unscanned_ /Users/wi
 #############################################
 # Link the executable app
 
-build app: C_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/src/license.S.o CMakeFiles/app.dir/src/main.c.o CMakeFiles/app.dir/src/planner.c.o CMakeFiles/app.dir/src/asplanner.c.o | /opt/will/lib/libraylib.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd
+build app: C_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/src/license.S.o CMakeFiles/app.dir/src/main.c.o CMakeFiles/app.dir/src/planner.c.o CMakeFiles/app.dir/src/asplanner.c.o CMakeFiles/app.dir/src/launcher.c.o | /opt/will/lib/libraylib.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd
   FLAGS = -I/opt/homebrew/include -I/opt/will/include -arch arm64
   LINK_FLAGS = -L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/flex/lib -L/opt/homebrew/opt/bison/lib -L/opt/homebrew/opt/openssl/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libiconv/lib -L/opt/homebrew/lib -L/opt/homebrew/opt/libxslt/lib -L/opt/will/lib
   LINK_LIBRARIES = /opt/will/lib/libraylib.a  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd  -L/opt/will/lib -lraylib -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo -framework AppKit -framework QuartzCore -framework Metal

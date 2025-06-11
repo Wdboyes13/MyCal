@@ -1,4 +1,4 @@
-  /*                                                                                                                                                                                                
+/*                                                                                                                                                                                                
   MyCal - A Planner & Calendar app with a UI                                                                                                                                                      
                                                                                                                                                                                                     
   Copyright (C) 2025  Wdboyes13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -22,8 +22,10 @@
 int rlmain() {
   InitWindow(800, 600, "MyCal");
   SetTargetFPS(60);
+  Rectangle glbutton = {343, 220, 120, 50};
   Rectangle scbutton = {350, 280, 100, 50};
   Color scbuttoncol = BLACK;
+  Color glbuttoncol = BLACK;
   Font roboto = LoadFontEx("Roboto.ttf", 40, 0, 0);
   bool rbl = true;
   bool wino = true;
@@ -37,7 +39,19 @@ int rlmain() {
   while (!WindowShouldClose()){
     BeginDrawing();
     ClearBackground(WHITE);
-
+    if (CheckCollisionPointRec(GetMousePosition(), glbutton)){
+      glbuttoncol = DARKGRAY;
+      if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
+	  if (rbl == true){UnloadFont(roboto); rbl = false;}
+          if (wino == true){CloseWindow(); wino = false;}
+          if (imo == true) {UnloadImage(img); imo = false;}
+	  launcher(0);
+          break;
+      }
+    } else {
+      glbuttoncol = BLACK;
+    }
+    
     if (CheckCollisionPointRec(GetMousePosition(), scbutton)){
       scbuttoncol = DARKGRAY;
       if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
@@ -64,6 +78,9 @@ int rlmain() {
       ascbuttoncol = BLACK;
     }
 
+    DrawRectangleRec(glbutton, glbuttoncol);
+    DrawTextEx(roboto, "GLauncher", (Vector2){glbutton.x + 10, glbutton.y+ 15}, 20, 1, WHITE);
+    
     DrawRectangleRec(ascbutton, ascbuttoncol);
     DrawTextEx(roboto, "AS Schedule", (Vector2){ascbutton.x + 10, ascbutton.y+ 15}, 20, 1, WHITE);
     
