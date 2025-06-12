@@ -79,22 +79,29 @@ void sched() {
 	  if (cnode->type == XML_ELEMENT_NODE){
 	    xmlChar* cattr = xmlGetProp(cnode, (const xmlChar*)"num");
 	    xmlChar* bcont = xmlNodeGetContent(cnode);
+	    xmlChar* times = xmlGetProp(cnode, (const xmlChar*)"ts");
+	    
 	    if (cattr != NULL){
 	      char bbuf[256];
-	      snprintf(bbuf, sizeof(bbuf), "\t Block %s : %s", cattr, bcont);
+	      
+	      snprintf(bbuf, sizeof(bbuf), "\t Block %s Start: %s : %s", cattr, times, bcont);
 	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
 	      y += bloH;
 	      xmlFree(bcont);
 	      xmlFree(cattr);
+	      xmlFree(times);
 	    } else if (strcasecmp((const char*)bcont, "Break") == 0 || strcasecmp((const char*)bcont, "Lunch") == 0){
 	      char bbuf[256];
-	      snprintf(bbuf, sizeof(bbuf), "\t %s", bcont);
+	     
+	      snprintf(bbuf, sizeof(bbuf), "\t Start: %s - %s", times, bcont);
 	      DrawTextEx(roboto, bbuf, (Vector2){x, y}, 20, 1, DARKGRAY);
 	      y += bloH;
 	      xmlFree(bcont);
 	      xmlFree(cattr);
+	      xmlFree(times);
 	    }
 	    else {
+	      xmlFree(times);
 	      xmlFree(bcont);
 	      xmlFree(cattr);
 	    }

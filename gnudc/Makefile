@@ -1,9 +1,13 @@
 DESTDIR=$(shell pwd)/dist
 STRIPPER = strip
+CC=gcc
+AR=ar
+RL=ranlib
+
 all: build
 build:
-	cd lib && make
-	cd dc && make
+	cd lib && make CC=$(CC) AR=$(AR) RL=$(RL)
+	cd dc && make CC=$(CC)
 clean:
 	cd lib && make clean
 	cd dc && make clean
