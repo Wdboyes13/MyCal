@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+shopt -s globstar
+
+if [ ! -d "~/.mycal" ]; then
+    mkdir ~/.mycal
+fi
+
 cd ~/.mycal/
 mkdir tetris
 cd tetris

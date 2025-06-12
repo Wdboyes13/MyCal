@@ -2,6 +2,10 @@
 set -euxo pipefail
 shopt -s globstar
 
+if [ ! -d "~/.mycal" ]; then
+    mkdir ~/.mycal
+fi
+
 mkdir -p ~/.mycal
 cd ~/.mycal
 mkdir doom
