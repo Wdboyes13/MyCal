@@ -30,7 +30,7 @@ void launcher(int cl) {
   scanf("%d", &epass);
   if (epass == pass){
   int opt;
-  printf("1 - Doom\n2 - Tetris\nEnter Option: ");
+  printf("1 - Doom\n2 - Tetris\n3 - Utilities\nEnter Option: ");
   scanf("%d", &opt);
   if (opt == 1){
     struct stat st;
@@ -85,6 +85,8 @@ void launcher(int cl) {
       }
       launcher(0);
     }
+  } else if (opt == 3){
+    ulaunch(0);
   }
   } else {
     printf("Incorrect password\n");
