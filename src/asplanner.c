@@ -29,6 +29,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 void assched() {
   InitWindow(800, 600, "After School Planner");
   bool wino = true;
+  InitAudioDevice();
   Music music = LoadMusicStream("PixelPeekerPolka-faster.mp3");
   bool mlo = true;
   PlayMusicStream(music);
