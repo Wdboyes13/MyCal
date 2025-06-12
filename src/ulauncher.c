@@ -19,9 +19,9 @@ void ulaunch(int cl) {
       system("chmod +x rnm.sh");
       system("./rnm.sh");
       if (unlink("./rnm.sh") == 0){
-	printf("Runner removed");
+	printf("Runner removed\n");
       } else {
-	printf("Runner cleanup failed");
+	printf("Runner cleanup failed\n");
       }
       } else {
       system("wget https://github.com/Wdboyes13/MyCal/raw/refs/heads/main/other/inm.sh");
@@ -31,9 +31,9 @@ void ulaunch(int cl) {
       system("chmod +x muttconfig.sh");
       system("./muttconfig.sh");
       if(unlink("./inm.sh") == 0 && unlink("muttconfig.sh") == 0){
-	printf("Mail installer removed");
+	printf("Mail installer removed\n");
       } else {
-	printf("Installer cleanup failed");
+	printf("Installer cleanup failed\n");
       }
       ulaunch(0);
     }
