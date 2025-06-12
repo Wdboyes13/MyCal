@@ -1,0 +1,9 @@
+Modified version of GNU bc v1.08.2
+Original source: https://ftp.gnu.org/gnu/bc/bc-1.08.2.tar.gz  
+
+Changes made are documented in the `Changes` file.  
+
+In compliance with the original project's license, this project is licensed under  
+the GNU General Public License version 3 (see `LICENSE`).  
+
+Original documentation, including list of authors, is available in the `DOCS/` directory.

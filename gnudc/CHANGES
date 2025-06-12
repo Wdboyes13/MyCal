@@ -1,0 +1,4 @@
+- Removed PO and Autotools stuff
+- Removed Docs
+- Rewrote build system to only use Make
+- Stripped out everything not required for dc

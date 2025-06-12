@@ -19,7 +19,8 @@ The Makefile is just a wrapper around CMake and others to make my life easier
 [Raylib](https://github.com/raysan5/raylib) - License info at [Licenses/Raylib.txt](Licenses/Raylib.txt)  
 [Roboto Font](https://fonts.google.com/specimen/Roboto) - License info at [Licenses/Font.txt](Licenses/Font.txt)  
 [Pixel Peeker Polka - Faster](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100833) - License info at [Licenses/BGM.txt](Licenses/BGM.txt)  
-  
+[Modified GNU BC](gnudc/) - Project and license info in folder  
+
 -- Project --  
 This project is released under The GNU General Public License version 3.0  
 You can view the full License text at [LICENSE](LICENSE)  
