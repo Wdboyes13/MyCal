@@ -1,18 +1,18 @@
 <schedule>
     <day num="1">
-        <block num="1" ts="9:00">PBL</block>
-        <block num="2" ts="10:10">Math</block>
-	<block ts="11:11">Break</block>
-        <block num="3" ts="11:25">ADST</block>
-	<block ts="12:40">Lunch</block>
-        <block num="4" ts="1:25">Band</block>
+        <block num="1" ts="9:00" te="10:10">PBL</block>
+        <block num="2" ts="10:10" te="11:11">Math</block>
+	<block ts="11:11" te="11:26">Break</block>
+        <block num="3" ts="11:26" te="12:40">ADST</block>
+	<block ts="12:40" te="13:21">Lunch</block>
+        <block num="4" ts="13:25" te="14:38">Band</block>
     </day>
     <day num="2">
-        <block num="1" ts="9:00">PBL</block>
-        <block num="2" ts="10:10">Literacy</block>
-	<block ts="11:11">Break</block>
-        <block num="3" ts="11:25">PHE</block>
-	<block ts="12:40">Lunch</block>
-        <block num="4" ts="1:25">Entrepreneurship</block>
+        <block num="1" ts="9:00" te="10:10">PBL</block>
+        <block num="2" ts="10:10" te="11:11">Literacy</block>
+	<block ts="11:11" te="11:26">Break</block>
+        <block num="3" ts="11:26" te="12:40">PHE</block>
+	<block ts="12:40" te="13:21">Lunch</block>
+        <block num="4" ts="13:25" te="14:38">Entrepreneurship</block>
     </day>
 </schedule>

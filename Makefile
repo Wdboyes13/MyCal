@@ -1,6 +1,11 @@
 FLS := $(wildcard src/*.c) $(wildcard src/*.h) $(wildcard src/rsr/*.c) testing/asc.xml testing/dsc.xml other/idea.txt README.md CMakeLists.txt
+FMT=clang-format
+FMTSRC := $(wildcard src/*.c) $(wildcard src/*.h) $(wildcard src/rsr/*.c)
 
-all: build tinstall lnc
+all: form build tinstall lnc
+
+form:
+	$(FMT) -i $(FMTSRC)
 
 regen:
 	mkdir build
@@ -34,4 +39,5 @@ pkg:
 	codesign -dvv pkg/app
 	@echo "\n"
 	zip -r mycal.zip pkg/
-.PHONY: all regen reconf build install git lnc clean pkg
+
+.PHONY: all regen reconf build tinstall git lnc clean pkg form

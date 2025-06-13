@@ -5,15 +5,17 @@ AR=ar
 RL=ranlib
 
 all: build
+
 build:
 	cd lib && make CC=$(CC) AR=$(AR) RL=$(RL)
 	cd dc && make CC=$(CC)
 clean:
 	cd lib && make clean
 	cd dc && make clean
-
+	rm env.sh
 strip:
 	$(STRIPPER) dc/dc
+
 install: strip
 	if [ ! -d "$(DESTDIR)" ]; then \
 	  mkdir "$(DESTDIR)"; \
