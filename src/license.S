@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #endif
 
     .global _my_email
-    _my_email: .asciz "Email: willdev2025@icloud.com"
+    _my_email: .asciz "Email: willdev2025@outlook.com"
 
     .global _proj_site
     _proj_site: .asciz "Website: https://github.com/Wdboyes13/MyCal"

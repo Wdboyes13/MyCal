@@ -46,10 +46,12 @@ build cmake_object_order_depends_target_app: phony || .
 
 build CMakeFiles/app.dir/src/license.S.o: ASM_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/license.S || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/license.S.o.d
-  FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/opt/will/include
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/opt/will/include
   INCLUDES = -isystem /opt/will/include -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/main.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/main.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/main.c.o.d
@@ -57,6 +59,8 @@ build CMakeFiles/app.dir/src/main.c.o: C_COMPILER__app_unscanned_ /Users/william
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/planner.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/planner.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/planner.c.o.d
@@ -64,6 +68,8 @@ build CMakeFiles/app.dir/src/planner.c.o: C_COMPILER__app_unscanned_ /Users/will
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/asplanner.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/asplanner.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/asplanner.c.o.d
@@ -71,6 +77,8 @@ build CMakeFiles/app.dir/src/asplanner.c.o: C_COMPILER__app_unscanned_ /Users/wi
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/launcher.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/launcher.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/launcher.c.o.d
@@ -78,6 +86,8 @@ build CMakeFiles/app.dir/src/launcher.c.o: C_COMPILER__app_unscanned_ /Users/wil
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/ulauncher.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/ulauncher.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/ulauncher.c.o.d
@@ -85,6 +95,8 @@ build CMakeFiles/app.dir/src/ulauncher.c.o: C_COMPILER__app_unscanned_ /Users/wi
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 build CMakeFiles/app.dir/src/tutils.c.o: C_COMPILER__app_unscanned_ /Users/william/coding/deepdive/src/tutils.c || cmake_object_order_depends_target_app
   DEP_FILE = CMakeFiles/app.dir/src/tutils.c.o.d
@@ -92,6 +104,8 @@ build CMakeFiles/app.dir/src/tutils.c.o: C_COMPILER__app_unscanned_ /Users/willi
   INCLUDES = -isystem /Library/Frameworks/GStreamer.framework/Headers
   OBJECT_DIR = CMakeFiles/app.dir
   OBJECT_FILE_DIR = CMakeFiles/app.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
+  TARGET_PDB = app.pdb
 
 
 # =============================================================================
@@ -101,15 +115,16 @@ build CMakeFiles/app.dir/src/tutils.c.o: C_COMPILER__app_unscanned_ /Users/willi
 #############################################
 # Link the executable app
 
-build app: C_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/src/license.S.o CMakeFiles/app.dir/src/main.c.o CMakeFiles/app.dir/src/planner.c.o CMakeFiles/app.dir/src/asplanner.c.o CMakeFiles/app.dir/src/launcher.c.o CMakeFiles/app.dir/src/ulauncher.c.o CMakeFiles/app.dir/src/tutils.c.o | /opt/will/lib/libraylib.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd
+build app: C_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/src/license.S.o CMakeFiles/app.dir/src/main.c.o CMakeFiles/app.dir/src/planner.c.o CMakeFiles/app.dir/src/asplanner.c.o CMakeFiles/app.dir/src/launcher.c.o CMakeFiles/app.dir/src/ulauncher.c.o CMakeFiles/app.dir/src/tutils.c.o | /opt/will/lib/libraylib.a /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd
   FLAGS = -I/opt/homebrew/include -I/opt/will/include -arch arm64
   LINK_FLAGS = -L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/flex/lib -L/opt/homebrew/opt/bison/lib -L/opt/homebrew/opt/openssl/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libiconv/lib -L/opt/homebrew/lib -L/opt/homebrew/opt/libxslt/lib -L/opt/will/lib
-  LINK_LIBRARIES = /opt/will/lib/libraylib.a  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd  -L/opt/will/lib -lraylib -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo -framework AppKit -framework QuartzCore -framework Metal
+  LINK_LIBRARIES = /opt/will/lib/libraylib.a  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd  -L/opt/will/lib -lraylib -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo -framework AppKit -framework QuartzCore -framework Metal
   OBJECT_DIR = CMakeFiles/app.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/app.dir/
   TARGET_FILE = app
-  TARGET_PDB = app.dbg
+  TARGET_PDB = app.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target rsr
@@ -122,15 +137,19 @@ build cmake_object_order_depends_target_rsr: phony || .
 
 build CMakeFiles/rsr.dir/src/license.S.o: ASM_COMPILER__rsr_unscanned_ /Users/william/coding/deepdive/src/license.S || cmake_object_order_depends_target_rsr
   DEP_FILE = CMakeFiles/rsr.dir/src/license.S.o.d
-  FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
   OBJECT_DIR = CMakeFiles/rsr.dir
   OBJECT_FILE_DIR = CMakeFiles/rsr.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/rsr.dir/
+  TARGET_PDB = rsr.pdb
 
 build CMakeFiles/rsr.dir/src/rsr/main.c.o: C_COMPILER__rsr_unscanned_ /Users/william/coding/deepdive/src/rsr/main.c || cmake_object_order_depends_target_rsr
   DEP_FILE = CMakeFiles/rsr.dir/src/rsr/main.c.o.d
   FLAGS = -I/opt/homebrew/include -I/opt/will/include -std=gnu17 -arch arm64
   OBJECT_DIR = CMakeFiles/rsr.dir
   OBJECT_FILE_DIR = CMakeFiles/rsr.dir/src/rsr
+  TARGET_COMPILE_PDB = CMakeFiles/rsr.dir/
+  TARGET_PDB = rsr.pdb
 
 
 # =============================================================================
@@ -146,8 +165,9 @@ build rsr: C_EXECUTABLE_LINKER__rsr_ CMakeFiles/rsr.dir/src/license.S.o CMakeFil
   OBJECT_DIR = CMakeFiles/rsr.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/rsr.dir/
   TARGET_FILE = rsr
-  TARGET_PDB = rsr.dbg
+  TARGET_PDB = rsr.pdb
 
 
 #############################################
@@ -200,14 +220,14 @@ build all: phony app rsr
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /Users/william/coding/deepdive/build/cmake_install.cmake: RERUN_CMAKE | /Users/william/coding/deepdive/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeASMInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindLibXml2.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeASMLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/will/lib/cmake/raylib/raylib-config-version.cmake /opt/will/lib/cmake/raylib/raylib-config.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeASMCompiler.cmake CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
+build build.ninja /Users/william/coding/deepdive/build/cmake_install.cmake: RERUN_CMAKE | /Users/william/coding/deepdive/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeASMCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeASMInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestASMCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/FindLibXml2.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeASMLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectASMLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/will/lib/cmake/raylib/raylib-config-version.cmake /opt/will/lib/cmake/raylib/raylib-config.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeASMCompiler.cmake CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/william/coding/deepdive/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeASMInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindLibXml2.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeASMLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/will/lib/cmake/raylib/raylib-config-version.cmake /opt/will/lib/cmake/raylib/raylib-config.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeASMCompiler.cmake CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
+build /Users/william/coding/deepdive/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeASMCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeASMInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestASMCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/FindLibXml2.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeASMLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectASMLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-ASM.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/will/lib/cmake/raylib/raylib-config-version.cmake /opt/will/lib/cmake/raylib/raylib-config.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeASMCompiler.cmake CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
 
 
 #############################################
